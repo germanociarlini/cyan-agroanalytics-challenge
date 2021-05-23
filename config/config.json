@@ -14,11 +14,14 @@
     "dialect": "postgres"
   },
   "production": {
-    "username": "admin",
-    "password": "root",
-    "database": "featurecollections_production",
-    "host": "localhost",
     "dialect": "postgres",
-    "use_env_varible": "DATABASE_URL"
+    "protocol": "postgres",
+    "use_env_variable": "DATABASE_URL",
+    "dialectOptions": {
+      "ssl": {
+        "require": true,
+        "rejectUnauthorized": false
+      }
+    }
   }
 }
