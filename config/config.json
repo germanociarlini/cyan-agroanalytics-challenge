@@ -1,23 +1,24 @@
 {
   "development": {
-    "username": "admin",
-    "password": "root",
+    "username": "germanociarlini",
+    "password": "password",
     "database": "featurecollections_development",
-    "host": "127.0.0.1",
+    "host": "localhost",
     "dialect": "postgres"
   },
   "test": {
-    "username": "admin",
-    "password": "root",
+    "username": "germanociarlini",
+    "password": "password",
     "database": "featurecollections_test",
-    "host": "127.0.0.1",
+    "host": "localhost",
     "dialect": "postgres"
   },
   "production": {
-    "username": "admin",
-    "password": "root",
+    "username": "germanociarlini",
+    "password": "password",
     "database": "featurecollections_production",
-    "host": "127.0.0.1",
-    "dialect": "postgres"
+    "host": "localhost",
+    "dialect": "postgres",
+    "use_env_varible": "DATABASE_URL"
   }
 }
