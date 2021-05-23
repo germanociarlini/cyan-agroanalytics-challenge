@@ -1,7 +1,5 @@
-'use strict';
-const {
-  Model
-} = require('sequelize');
+"use strict";
+const { Model } = require("sequelize");
 module.exports = (sequelize, DataTypes) => {
   class Feature extends Model {
     /**
@@ -11,19 +9,22 @@ module.exports = (sequelize, DataTypes) => {
      */
     static associate(models) {
       // define association here
-      Feature.belongsTo(model.Collection, {
-        foreignKey: 'collection_id',
-        onDelete: 'CASCADE'
-      })
+      Feature.belongsTo(models.Collection, {
+        foreignKey: "collection_id",
+        onDelete: "CASCADE",
+      });
     }
-  };
-  Feature.init({
-    collection_id: DataTypes.INTEGER,
-    properties: DataTypes.JSON,
-    geometry: DataTypes.GEOMETRY
-  }, {
-    sequelize,
-    modelName: 'Feature',
-  });
+  }
+  Feature.init(
+    {
+      collection_id: DataTypes.INTEGER,
+      properties: DataTypes.JSON,
+      geometry: DataTypes.GEOMETRY,
+    },
+    {
+      sequelize,
+      modelName: "Feature",
+    }
+  );
   return Feature;
 };
