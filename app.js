@@ -9,6 +9,10 @@ app.use(express.json());
 app.use(cors());
 app.use(routes);
 
+if (process.env.NODE_ENV === "production") {
+  app.use(express.static("client/build"));
+}
+
 app.listen(port, () => {
   console.log(`Running server on port ${port}`);
 });
