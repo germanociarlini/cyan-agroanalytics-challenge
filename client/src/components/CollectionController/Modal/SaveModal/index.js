@@ -24,12 +24,13 @@ const SaveModal = ({ onSaveAs, onOverwrite }) => {
   };
 
   return (
-    <div className="save-modal__content">
+    <div className="save-modal__content" title="saveModalContent">
       <header>
-        <h2>Save Feature Collection</h2>
+        <h2 title="saveModalHeader">Save Feature Collection</h2>
       </header>
       <main>
         <input
+          title="saveModalInput"
           className="save-modal__input"
           type="text"
           value={saveName}
@@ -40,6 +41,7 @@ const SaveModal = ({ onSaveAs, onOverwrite }) => {
       <footer>
         {collection && (
           <button
+            title="saveModalOverwriteButton"
             className="modal__button"
             disabled={saveName.length === 0}
             onClick={onOverwriteHandler}>
@@ -47,6 +49,7 @@ const SaveModal = ({ onSaveAs, onOverwrite }) => {
           </button>
         )}
         <button
+          title="saveModalSaveAsButton"
           className="modal__button"
           disabled={saveName.length === 0}
           onClick={onSaveAsHandler}>
