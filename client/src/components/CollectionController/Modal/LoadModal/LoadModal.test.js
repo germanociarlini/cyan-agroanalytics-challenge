@@ -25,7 +25,7 @@ const mockCollections = [
 
 const BaseUrl = "http://localhost:3001";
 
-describe("Tests with LoadModal", () => {
+xdescribe("Tests with LoadModal", () => {
   it("should render LoadModal", async () => {
     nock(BaseUrl).get("/collections").reply(200, mockCollections);
     await act(async () => {
@@ -34,10 +34,4 @@ describe("Tests with LoadModal", () => {
     });
     expect(screen.getByText("Load Feature Collection")).toBeInTheDocument();
   });
-
-  // xit("onClick", () => {
-  //   const { queryByTitle } = render(<LoadModal />);
-  //   const modalButton = queryByTitle("modalLoadButton");
-  //   fireEvent.click(modalButton);
-  // });
 });

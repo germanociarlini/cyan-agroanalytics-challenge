@@ -1,7 +1,7 @@
 import nock from "nock";
 import { saveFeatures, saveNewCollection, updateCollection } from "./utils";
 
-const BaseUrl = "http://localhost:3001";
+const BaseUrl = "http://localhost";
 
 test("saveNewCollection", async () => {
   nock(BaseUrl)
